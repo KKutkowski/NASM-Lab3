@@ -8,11 +8,6 @@ section .bss
 
 section .text
 
-add_numbers:
-    mov rdi,[suma]
-    add rdi,rsi
-    mov [suma],rdi
-    ret
 
 _start:
     mov [suma],0
@@ -25,7 +20,7 @@ _start:
     add rbx,8
     loop _loop_start
 
-    
+
     ; Zakoncz program.
     mov rax, 60            ; Numer wywolania exit.
     mov rdi, 0             ; Kod zakonczenia — sukces.
